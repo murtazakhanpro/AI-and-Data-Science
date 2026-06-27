@@ -1,3 +1,5 @@
-import streamlit as st # pyright: ignore[reportMissingImports]
+import pandas as pd
+import streamlit as st
+import numpy as np
 
-st.write("Hello World")
+st.set_page_config("std_form" ,layout="centered")
