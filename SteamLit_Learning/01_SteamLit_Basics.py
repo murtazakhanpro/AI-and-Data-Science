@@ -5,7 +5,7 @@ import numpy as np
 st.set_page_config("std_form" ,layout="centered")
 
 st.title("Student Form")
-st.write("write your name and marks.")
+st.write("Write your name and marks.")
 
 with st.form("marks_form"):
     name = st.text_input("student name" , value="" )
@@ -36,8 +36,8 @@ if submit:
     pct = std_percentage(marks)
     grade = std_grade(pct)
 
-    st.subheader(f"Hello {name}")
-    st.write(f" your percentage is {pct}")
+    st.subheader(f"Student name is: {name}")
+    st.write(f" your percentage is {pct}%")
     st.write(f"your grade is {grade}")
 
 df = pd.DataFrame({"Subject": ["python","C" , "R"], "Marks": marks})
