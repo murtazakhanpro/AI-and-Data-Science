@@ -30,12 +30,16 @@ def std_grade(pct):
         return "C"
     else :
         return "F"
+marks = [python ,c,r]
 
 if submit:
-    marks = [python ,c,r]
     pct = std_percentage(marks)
     grade = std_grade(pct)
 
     st.subheader(f"Hello {name}")
     st.write(f" your percentage is {pct}")
     st.write(f"your grade is {grade}")
+
+df = pd.DataFrame({"Subject": ["python","C" , "R"], "Marks": marks})
+
+st.table(df)
